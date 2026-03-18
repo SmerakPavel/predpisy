@@ -41,7 +41,7 @@ try:
 except:
     st.write("🤖")
 
-st.title("Mám široké znalosti z SP 17")
+st.title("Mám široké znalo z SP 17")
 
 # --- 4. LOGIKA DOTAZŮ ---
 def zpracovat_a_smazat():
