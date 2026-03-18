@@ -101,6 +101,12 @@ if dotaz:
                 st.chat_message("assistant").write(response.text)
         
         except Exception as e:
-            st.error(f"Chyba AI: {e}")
+            # Ošetření chyby 429 - Překročení limitu
+            if "429" in str(e):
+                st.error("⚠️ **Limit vyčerpán, zkuste to za minutu.**")
+            else:
+                st.error(f"Chyba: {e}")
             
+        # Reset dotazu po zobrazení
+        st.session_state.aktualni_dotaz = ""
     st.session_state.aktualni_dotaz = ""
