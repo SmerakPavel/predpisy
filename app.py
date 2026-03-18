@@ -103,7 +103,7 @@ if dotaz:
         except Exception as e:
             # Ošetření chyby 429 - Překročení limitu
             if "429" in str(e):
-                st.error("⚠️ **Limit vyčerpán, zkuste to za minutu.**")
+                st.error("⚠️ **Pavel je vyčerpán, zkuste to za 5 minut.**")
             else:
                 st.error(f"Chyba: {e}")
             
